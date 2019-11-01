@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "526553742478",
+    "firebase_url": "https://makeup-ef1a8.firebaseio.com",
+    "project_id": "makeup-ef1a8",
+    "storage_bucket": "makeup-ef1a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526553742478:android:c91284c4586c2f9e3d1ddf",
+        "android_client_info": {
+          "package_name": "com.tylerb.makeupsearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526553742478-d7v01o1lvels32miq3oaiog40c3vu5kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tylerb.makeupsearch",
+            "certificate_hash": "5fce86eee1f5f226b157f23c873a16a2c4eeb649"
+          }
+        },
+        {
+          "client_id": "526553742478-1a57b26jsoqtneho5kql5tt3fg8cat0k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG53HqJgOccoDz5JdoU9vyUZUgUHhssbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526553742478-1a57b26jsoqtneho5kql5tt3fg8cat0k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
