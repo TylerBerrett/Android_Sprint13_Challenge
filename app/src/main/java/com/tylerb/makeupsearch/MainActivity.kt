@@ -20,6 +20,7 @@ import com.tylerb.makeupsearch.model.Makeup
 import com.tylerb.makeupsearch.retrofit.ApiCall
 import com.tylerb.makeupsearch.util.breadCrumb
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
@@ -36,6 +37,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var disposable: Disposable
 
+    lateinit var compositeDisposable: CompositeDisposable
+
     var list = ArrayList<Makeup>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +50,8 @@ class MainActivity : AppCompatActivity() {
         FirebaseAnalytics.getInstance(this).setCurrentScreen(this, this.localClassName, "test")
 
         val adapter = MakeupAdapter(list)
+
+        compositeDisposable = CompositeDisposable(disposable)
 
         search_bar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(search: String?): Boolean {
@@ -128,6 +133,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        disposable.dispose()
+        // if I had more disposables and add them to compositeDisposable it will clear them all here
+        compositeDisposable.clear()
     }
 }
