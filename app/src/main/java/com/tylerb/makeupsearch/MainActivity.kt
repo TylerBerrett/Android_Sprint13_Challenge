@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = MakeupAdapter(list)
 
-        compositeDisposable = CompositeDisposable(disposable)
+
 
         search_bar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(search: String?): Boolean {
@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
                             { fail -> loading.visibility = View.INVISIBLE }
                         )
                 }
+                compositeDisposable = CompositeDisposable(disposable)
 
                 val bundle = Bundle()
                 bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, search)
